@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.grpc.ex;
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "com.telokos.grpc";
+
+service IdGeneratorService {
+  rpc generate(google.protobuf.Empty) returns (IDGeneratorResponse) {
+  }
+}
+
+message IDGeneratorResponse {
+  string id = 1;
+}
